@@ -3,8 +3,8 @@ var kleiDust = require('../lib/klei/dust'),
 
 describe("Options", function () {
     describe("getOptions", function () {
-        it("should have .dust as default extension", function (done) {
-            kleiDust.getOptions().extension.should.equal(".dust");
+        it("should have dust as default extension", function (done) {
+            kleiDust.getOptions().extension.should.equal("dust");
             done();
         });
     });
