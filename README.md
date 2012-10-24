@@ -1,7 +1,7 @@
 Klei Dust
 =========
 
-**N.B. Backwards Compatability:** To make version **0.4** Backwards Compatible with version 0.3 and below, set the option `relativeToFile` to `false`!
+**N.B. Backwards Compatability:** To make version **0.4.x** Backwards Compatible with version 0.3 and below, set the option `relativeToFile` to `false`!
 
 **klei-dust** is a helper (inspired by [Consolidate](https://github.com/visionmedia/consolidate.js)) to use [dustjs-linkedin](https://npmjs.org/package/dustjs-linkedin) templates as views along with [express](https://npmjs.org/package/express) 3.* for [node.js](http://nodejs.org/).
 
