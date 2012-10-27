@@ -7,6 +7,10 @@ describe("Options", function () {
             kleiDust.getOptions().extension.should.equal("dust");
             done();
         });
+        it("relativeToFile should be true by default", function (done) {
+            kleiDust.getOptions().relativeToFile.should.be.true;
+            done();
+        });
     });
 
     describe("setOptions", function () {
@@ -28,6 +32,13 @@ describe("Options", function () {
             var extension = ".jst";
             kleiDust.setOptions({extension: extension});
             kleiDust.getOptions().extension.should.equal(extension);
+            done();
+        });
+
+        it("should set relativeToFile setting if specified", function (done) {
+            var relativeToFile = false;
+            kleiDust.setOptions({relativeToFile: relativeToFile});
+            kleiDust.getOptions().relativeToFile.should.equal(relativeToFile);
             done();
         });
 
