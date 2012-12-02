@@ -1,7 +1,7 @@
 Klei Dust
 =========
 
-**N.B. Backwards Compatability:** To make version **0.4.x** Backwards Compatible with version 0.3 and below, set the option `relativeToFile` to `false`!
+**N.B. Backwards Compatability:** To make version **>=0.4.x** Backwards Compatible with version 0.3 and below, set the option `relativeToFile` to `false`!
 
 **klei-dust** is a helper (inspired by [Consolidate](https://github.com/visionmedia/consolidate.js)) to use [dustjs-linkedin](https://npmjs.org/package/dustjs-linkedin) templates as views along with [express](https://npmjs.org/package/express) 3.* for [node.js](http://nodejs.org/).
 
@@ -93,6 +93,21 @@ If you want another extension, e.g. `html` then use this settings instead:
 
 **N.B.** In the examples above klei-dust uses the express `views` setting to locate views, see options below.
 
+Using klei-dust without express
+-------------------------------
+
+How to use klei-dust to compile templates whithout express:
+
+```javascript
+var kleiDust = require('klei-dust');
+
+kleiDust.dust('<your-template-folder>/<your-template-name>', <template-data>, function (err, out) {
+    if (err) return console.log(err);
+
+    // Do something with `out`...
+});
+```
+
 Available options
 -----------------
 
@@ -100,6 +115,7 @@ Available options
 * `root` - sets the root directory for all the views/templates, if not set the express `views` setting is used (only applies if `relativeToFile` is set to `false`)
 * `extension` - sets the default extension for views if omitted in includes/partials, defaults to `.dust`
 * `cache` - specifies if the template cache should be enabled or not, defaults to `false`
+* `keepWhiteSpace` - if `true` whitespace in templates won't be compressed, defaults to `false`
 
 The options is set with the `setOptions()` method.
 
