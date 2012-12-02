@@ -116,6 +116,7 @@ Available options
 * `extension` - sets the default extension for views if omitted in includes/partials, defaults to `.dust`
 * `cache` - specifies if the template cache should be enabled or not, defaults to `false`
 * `keepWhiteSpace` - if `true` whitespace in templates won't be compressed, defaults to `false`
+* `useHelpers` - if `true` klei-dust will try and load dustjs-helpers, defaults to `false`
 
 The options is set with the `setOptions()` method.
 
@@ -123,3 +124,4 @@ Convenience methods
 -------------------
 
 * `getDust` - returns the dustjs-linkedin instance to be able to use the streaming api and such.
+* `setHelpers` - sets the dust.helpers property to the given value.
