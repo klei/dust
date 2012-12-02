@@ -1,13 +1,14 @@
 {
   "name": "klei-dust",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A helper to use dustjs-linkedin along with express 3.*",
   "main": "index.js",
   "repository": "git://github.com/klei-dev/dust.git",
   "dependencies": {
-    "dustjs-linkedin": ">=1.1.1"
   },
   "devDependencies": {
+    "dustjs-linkedin": ">=1.1.1",
+    "dustjs-helpers": ">=1.1.0",
     "mocha": ">=1.6.0",
     "should": ">=1.2.0"
   },
