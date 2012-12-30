@@ -1,5 +1,5 @@
-Klei Dust
-=========
+Klei Dust (bugfix fork for pull request)
+========================================
 
 **N.B. Backwards Compatability:** To make version **>=0.4.x** Backwards Compatible with version 0.3 and below, set the option `relativeToFile` to `false`!
 
