@@ -125,3 +125,8 @@ Convenience methods
 
 * `getDust` - returns the dustjs-linkedin instance to be able to use the streaming api and such.
 * `setHelpers` - sets the dust.helpers property to the given value.
+
+Contributing
+-------------------
+
+`klei-dust` uses [Git Flow](http://nvie.com/posts/a-successful-git-branching-model/) as its branching model, therefore all pull requests should be made to the [develop branch](https://github.com/klei-dev/dust/tree/develop).
