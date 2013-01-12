@@ -8,12 +8,28 @@ describe("Options", function () {
     });
 
     describe("getOptions", function () {
+        it("should have no root set by default", function (done) {
+            should.not.exist(kleiDust.getOptions().root);
+            done();
+        });
         it("should have dust as default extension", function (done) {
             kleiDust.getOptions().extension.should.equal("dust");
             done();
         });
+        it("cache should be false by default", function (done) {
+            kleiDust.getOptions().cache.should.be.false;
+            done();
+        });
         it("relativeToFile should be true by default", function (done) {
             kleiDust.getOptions().relativeToFile.should.be.true;
+            done();
+        });
+        it("useHelpers should be false by default", function (done) {
+            kleiDust.getOptions().useHelpers.should.be.false;
+            done();
+        });
+        it("keepWhiteSpace should be false by default", function (done) {
+            kleiDust.getOptions().keepWhiteSpace.should.be.false;
             done();
         });
     });
@@ -44,6 +60,20 @@ describe("Options", function () {
             var relativeToFile = false;
             kleiDust.setOptions({relativeToFile: relativeToFile});
             kleiDust.getOptions().relativeToFile.should.equal(relativeToFile);
+            done();
+        });
+
+        it("should set useHelpers setting if specified", function (done) {
+            var useHelpers = true;
+            kleiDust.setOptions({useHelpers: useHelpers});
+            kleiDust.getOptions().useHelpers.should.equal(useHelpers);
+            done();
+        });
+
+        it("should set keepWhiteSpace setting if specified", function (done) {
+            var keepWhiteSpace = true;
+            kleiDust.setOptions({keepWhiteSpace: keepWhiteSpace});
+            kleiDust.getOptions().keepWhiteSpace.should.equal(keepWhiteSpace);
             done();
         });
 
