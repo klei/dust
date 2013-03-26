@@ -1,0 +1,9 @@
+{!
+   This template references a "partial", defined in `partial-child.dust`.
+   This template is used by tests in `test/dust.js`.
+!}
+<ul>
+{#items}
+    <li>{>"templates/partial-child"/}</li>
+{/items}
+</ul>

@@ -1,0 +1,5 @@
+{!
+   This is template is a "partial", included in `partial-parent.dust`.
+   This template is used by tests in `test/dust.js`.
+!}
+The item is {item}.
