@@ -24,6 +24,15 @@ describe("dust", function () {
         });
     });
 
+    it("should render relative templates", function (done) {
+        kleiDust.setOptions({root: __dirname});
+        kleiDust.dust('templates/relative-parent', {}, function (err, out) {
+            should.not.exist(err);
+            out.should.equal("lorem ipsum");
+            done();
+        });
+    });
+
     // Confirm that we don't encounter an EMFILE error when loading the same template many times.
     // See <https://github.com/klei-dev/dust/issues/7> for more detail.
     it("[issue 7] should render templates that includes a partial many times", function (done) {
