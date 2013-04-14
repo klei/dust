@@ -4,6 +4,7 @@ var kleiDust = require('../lib/klei/dust'),
 describe("dust", function () {
 
     beforeEach(function (done) {
+        kleiDust.resetInitialization();
         kleiDust.setOptions({}); // reset options
         done();
     });
