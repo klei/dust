@@ -29,7 +29,7 @@ describe("dust", function () {
         var count = 1000; // number of times to include the partial
         var context = { items: [] };
         for(var i=0; i < count; i++) {
-            var value = 'Item #'+i
+            var value = 'Item #'+i;
             context.items.push({item:value});
         }
         kleiDust.setOptions({root:__dirname,relativeToFile:false});
@@ -37,6 +37,15 @@ describe("dust", function () {
             should.not.exist(err);
             out.indexOf(context.items[0].item).should.be.above(-1);
             out.indexOf(context.items[count-1].item).should.be.above(-1);
+            done();
+        });
+    });
+
+    it("[issue 9] should render templates that uses helpers", function (done) {
+        kleiDust.setOptions({root: __dirname, useHelpers: true});
+        kleiDust.dust('templates/with-helpers', {x: true}, function (err, out) {
+            should.not.exist(err);
+            out.should.equal('yes');
             done();
         });
     });
