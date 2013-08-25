@@ -59,4 +59,22 @@ describe("dust", function () {
             done();
         });
     });
+
+    it("[issue 13] should let me add helpers with onDustInit", function (done) {
+        kleiDust.setOptions({root: __dirname});
+        
+        kleiDust.onDustInit(function(dust) {
+            should.exist(dust);
+            dust.helpers.test_helper = function(chunk,context,bodies,params) {
+              return chunk.write("This is a test");
+            }
+        })
+
+        kleiDust.dust('templates/helper', {}, function (err, out) {
+            should.not.exist(err);
+            out.should.equal("<div>This is a test</div>");
+            done();
+        });
+    });
+
 });
