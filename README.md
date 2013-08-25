@@ -124,8 +124,8 @@ Convenience methods
 -------------------
 
 * `getDust` - returns the dustjs-linkedin instance to be able to use the streaming api and such.
-* `onDustInit` - takes 1 argument, an async callback with the prototype cb(dust,klei,locals), allowing you to manipulate the object before render (this is the only way I know to add custom helpers).
 * `setHelpers` - sets the dust.helpers property to the given value.
+* `getHelpers` - gets the current dust.helpers.
 * `setFilters` - sets the dust.filters property to the given value.
 * `getFilters` - gets the current dust.filters.
 
