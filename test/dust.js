@@ -74,4 +74,13 @@ describe("dust", function () {
         });
     });
 
+    it("[issue 17] should render templates with a basecontext if provided", function (done) {
+        kleiDust.setOptions({root: __dirname, useHelpers: true, baseContext: {basevar: 'apples'}});
+        kleiDust.dust('templates/basecontext', {local: 'oranges'}, function (err, out) {
+            should.not.exist(err);
+            out.trim().should.equal('apples and oranges');
+            done();
+        });
+    });
+
 });
