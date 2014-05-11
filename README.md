@@ -128,6 +128,7 @@ Convenience methods
 * `getHelpers` - gets the current dust.helpers.
 * `setFilters` - sets the dust.filters property to the given value.
 * `getFilters` - gets the current dust.filters.
+* `create` - create a new instance
 
 Contributing
 -------------------
