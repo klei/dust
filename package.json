@@ -1,6 +1,6 @@
 {
   "name": "klei-dust",
-  "version": "0.8.2",
+  "version": "1.0.0",
   "description": "A helper to use dustjs-linkedin along with Express",
   "main": "index.js",
   "repository": "git://github.com/klei/dust.git",
