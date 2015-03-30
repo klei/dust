@@ -1,9 +1,7 @@
 Klei Dust
 =========
 
-**N.B. Backwards Compatability:** To make version **>=0.4.x** Backwards Compatible with version 0.3 and below, set the option `relativeToFile` to `false`!
-
-**klei-dust** is a helper (inspired by [Consolidate](https://github.com/visionmedia/consolidate.js)) to use [dustjs-linkedin](https://npmjs.org/package/dustjs-linkedin) templates as views along with [express](https://npmjs.org/package/express) 3.* for [node.js](http://nodejs.org/).
+> **klei-dust** is a helper (inspired by [Consolidate](https://github.com/visionmedia/consolidate.js)) to use [dustjs-linkedin](https://npmjs.org/package/dustjs-linkedin) templates as views along with [express](https://npmjs.org/package/express) for [node.js](http://nodejs.org/).
 
 Advantages
 ----------
@@ -130,7 +128,7 @@ Convenience methods
 * `getFilters` - gets the current dust.filters.
 * `create` - create a new instance
 
-Contributing
--------------------
+License
+---------
 
-`klei-dust` uses [Git Flow](http://nvie.com/posts/a-successful-git-branching-model/) as its branching model, therefore all pull requests should be made to the [develop branch](https://github.com/klei-dev/dust/tree/develop).
+MIT
