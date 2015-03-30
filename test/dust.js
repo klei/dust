@@ -83,4 +83,13 @@ describe("dust", function () {
         });
     });
 
+    it("keeps whitespace if `keepWhiteSpace` is set", function (done) {
+        kleiDust.setOptions({root: __dirname, keepWhiteSpace: true});
+        kleiDust.dust('templates/with-whitespace', {}, function (err, out) {
+            should.not.exist(err);
+            out.should.equal('hello world\n');
+            done();
+        });
+    });
+
 });
